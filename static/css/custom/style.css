@@ -1,0 +1,445 @@
+@charset  "utf-8";
+ /* fonts */
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;0,800;0,900;1,500&display=swap');
+
+ /* body */
+ *{
+     margin: 0;
+     padding: 0;
+ }
+ body{
+     font-family: 'poppins', sans-serif;
+     font-size: 14px;
+     line-height: 23px;
+     font-weight: 400;
+     background: #ffff;
+     color: black;
+ }
+
+ div{
+     display: block;
+     position: relative;
+     box-sizing: border-box;
+ }
+
+ ul{
+     list-style: none;
+     margin-bottom: 0p;
+ }
+ p{
+     font-family: 'poppins', sans-serif;
+     font-size: 14px;
+     line-height: 1.7;
+     font-weight: 500;
+     color: #989898;
+     -webkit-font-smoothing: antialiased;
+     text-shadow: #989898;
+ }
+
+
+
+
+ p a{
+     display: inline;
+     position: relative;
+     color: inherit;
+     border-bottom: solid 2px #fd3;
+     transition: all 200ms ease;
+
+
+ }
+
+ a, a:hover, a:active, a:link{
+     text-decoration: none;
+     -webkit-font-smoothing: antialiased;
+     text-shadow: rgb(0, 0, 0,.01) 0 0 1px;
+ }
+
+ p a:active{
+     position: relative;
+     color: #fd3;
+
+ }
+
+ p a:hover{
+     color: crimson;
+     background-color: azure;
+ }
+
+ ::selection{
+     background: #ff63ff;
+
+ }
+
+
+ 
+ h1{font-size: 72;}
+ h2{font-size: 40;}
+ h3{font-size: 28;}
+ h4{font-size: 24;}
+ h5{font-size: 16;}
+ h1, h2, h3, h4, h5 {
+     color: black;
+     -Webkit-font-smoothing: animation;
+     text-shadow: black;
+ }
+
+ .trans_300{
+     transition: all 300ms ease;
+ }
+::input-placeholder{
+    font-size: 16px !important;
+    font-weight: 500;
+    color: #777777;
+}
+.super-container{
+    width: 100%;
+    overflow: hidden;
+
+}
+
+/* home */
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    z-index: 10;
+
+
+}
+
+/* topbar */
+
+.Top-Bar{
+    background-color: black;
+    height: 35px;
+
+}
+.button-section{
+    float: right;
+    width: 300px;
+  }
+  .login-btn{
+    background-color: rgb(18, 17, 17);
+    color: aliceblue;
+    height: 30px;
+  
+  }
+  
+  .create-btn{
+    background-color: rgb(18, 17, 17);
+    color: aliceblue;
+  
+  }
+  
+  .wishlist-btn{
+    background-color: rgb(18, 17, 17);
+    color: aliceblue;
+   
+  }
+
+
+/* main-nav */
+.main_nav_container{
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 0 16px rgb(0, 0, 0,.015);
+
+}
+.navbar{
+    width: auto;
+    height: 40px;
+    float: right;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.navbar_menu li{
+    display: inline-block;
+}
+
+.navbar_menu li a{
+    display: block;
+    color: black;
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 20px;
+    transition: color 0.3s ease;
+}
+.navbar_menu li a:hover{
+    color: rgb(255, 0, 0);
+}
+.navbar_user{
+    margin-left: 37px;
+}
+
+.navbar_user li a{
+    display: inline-block;
+    text-align: center;
+}
+
+.navbar_user li{
+    display: inline-block;
+    flex-direction: column;
+    justify-items: center;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    color: black;
+    transition: color 0.3s ease;
+}
+
+.navbar_user li a:hover{
+    color: #b5aec4;
+}
+.checkout{
+    color: #b5aec4;
+}
+.checkout a{
+    background: #eceff6;
+    border-radius: 50%;
+}
+.checkout_items{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -9px;
+    left :20px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: rgb(17, 17, 17);
+    font-size: 12px;
+    color: #ffff;
+
+
+}
+/* 
+logo */
+
+.logo_container {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 15px;
+}
+
+
+
+.logo_container a{
+    font-size: 20px;
+    color: black;
+}
+.logo_container a span{
+    color: #fd3;
+}
+
+/* slide */
+
+.container-fluid{
+    padding: 7px; 
+  }
+  .carousel-item img{
+    width: 50%;
+    height: 88vh;
+  }
+  .navbar-brand{
+    margin-left: 50px;
+    font-size: 30px;
+  }
+  .carousel-caption{
+    padding-bottom: 1.25rem;
+  }
+  /* Fading animation */
+  .carousel-item {
+  animation-name: fade;
+  animation-duration: 1.5s;
+  }
+  
+  @keyframes carousel-item {
+  from {opacity: .4}
+  to {opacity: 1}
+  }
+
+
+
+  /* mainhead_body */
+  .main_body_head {
+      height: 100px;
+      background-color: #ff63ff;
+  }
+ .main_body_head h1 {
+     padding-left: 43%;
+     font-size: 30px;
+     font-weight: 500;
+     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+     padding-top: 30px;
+    
+ }
+ .main_body_head span{
+    padding-left: 41%;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-bottom: 40px;
+}
+.black_button{
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 40px;
+    background: black;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+
+}
+.black_button a{
+    display: block;
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+    text-align: center;
+    font-weight: 500;
+    line-height: 40px;
+    width: 100%;
+}
+.black_button :hover{
+    background: #ff63ff;
+}
+.shop_now_button{
+    width: 140px;
+    margin-top: 32px;
+}
+
+
+/* special */
+
+
+.categories{
+    margin-top: 70px;
+
+}
+.col-3{
+    flex-basis: 30%;
+    min-height: 250px;
+    margin-bottom: 30px;
+}
+.col-3 img{
+    width: 100%;
+}
+.small-container{
+     max-width: 1080;
+     margin: auto;
+     padding-left: 300px ;
+     /* padding-right: 30%; */
+}
+
+.col-4{
+    flex-basis: 25%;
+    padding: 10px;
+    min-height: 200px;
+    margin-bottom :50px ;
+    transition: transform 0.5s ;
+    
+}
+.col-4 img{
+    width: 100%;
+}
+.mini-container{
+    max-width: 1080;
+    margin: auto;
+    padding-left: 100px ;
+    padding-right: 100px;
+}
+
+.title{
+    text-align: center;
+    margin: 0 auto 80px;
+    position: relative;
+    line-height: 60px;
+    color: #555;
+}
+.title::after{
+    color: '';
+    background: #ff523b;
+    width: 80px;
+    height: 5px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+     
+}
+h4{
+    color: rgba(178, 16, 16, 0.333);
+    font-weight: normal;
+}
+.col-4 p{
+    font-size: 14px;
+}
+.rating{
+    color: #ff523b;
+}
+.col-4:hover{
+    transform: translate(-5px);
+}
+
+
+
+
+
+  /* footer */
+  footer{
+    background-color: black;
+    padding-bottom: 20px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  
+  
+  
+
