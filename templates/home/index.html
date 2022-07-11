@@ -271,7 +271,7 @@
                             <a href="product/product"><img src="{{x.image.url}}" alt="Responsive image" > </a>
                            
                             <p class="lead" style="font-size: 30px;">{{x.caption}}</p>
-                            <p class="lead" style="font-size: 20px; padding-top: -60px;">{{x.price}}</p>
+                            <p class="lead" style="font-size: 20px; padding-top: -0px;">{{x.price}}</p>
                             <div class="rating">
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star"></i>
@@ -285,16 +285,36 @@
                  
                  
                     </div>
+                    <br>
+                    <br>
                     
                     <div class="page-btn">
                         <span>1</span>
                         <span>2</span>
-                        <span>2</span>
+                        <span>3</span>
                         <span>4</span>
                         <span>&#8594:</span>
                     </div>
                 </div>
             </section>
+
+            <style>
+                div.product-category {
+                    /* background-color: #333; */
+                    overflow: auto;
+                    white-space: nowrap;
+                }
+
+                div.product-category a {
+                    display: inline-block;
+                    color: white;
+                    text-align: center;
+                    padding: 14px;
+                    text-decoration: none;
+                }
+
+                   
+            </style>
 
 
 
