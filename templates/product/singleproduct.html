@@ -76,45 +76,25 @@
 
     <!-- single product dettails -->
     <div class="small-containers single-product">
+        {% for x in pics %}
         <div class="row2">
             <div class="colu-2">
-                <img src="{% static 'image/tamang/tamang-cholo.jpg'%}" width="100%" id="productImg">
-                <div class="small-img-row">
-                    <div class="small-img-col">
-                        <img src="{% static 'image/tamang/tamang-cholo1.jpg'%}" width="100%" class="small-img">
-                    </div>
-                    <div class="small-img-col">
-                        <img src="{% static 'image/tamang/tamang-cholo2.jpg'%}" width="100%" class="small-img">
-                    </div>
-                    <div class="small-img-col">
-                        <img src="{% static 'image/tamang/tamang-cholo3.jpg'%}" width="100%" class="small-img">
-                    </div>
-                    <div class="small-img-col">
-                        <img src="{% static 'image/tamang/tamang-cholo.jpg'%}" width="100%" class="small-img">
-                    </div>
-                </div>
+               <img src="{{x.image.url}}" alt="Responsive image" >
+                          
             </div>
             <div class="colu-2">
-                <p>Home / cholo </p>
-                <span>Tamang Dress Girls – Traditional Costumes of Nepal</span>
-                <h1>Tamang Dress Girls – Traditional Costumes of Nepal </h1>
-                <h4>Rs. 1200</h4>
-            
+                <p class="lead" style="margin-top: 0; margin-bottom: 1rem;">{{x.caption}}</p>
+                <p class="lead" style="font-size: 30px; line-height: 60px;margin: 25px 0;  font-weight: 500;">{{x.caption2}}</p>
+                                       
+                           
                 <h3>Products Details<i class="fa fa-indent"></i></h3>
-                <ul>
-                    <li> *Chest – 20 inches & bust – 26 inches </li>
-                    <li> *20/24 inches long</li>
-
-                </ul>
+                <p class="lead" style="font-size: 18px; color: #555; padding-left: 0px;">{{x.decs}}</p>
+                                      
                 <a href="" class="btn"> Add to cart</a>
                 <a href="" class="btn"> Buy</a>
-                <!-- <br>
-                    <p>
-                        markerz
-                        Top: Chest – 20 inches & bust – 26 inches
-                        Bottom: 20/24 inches long
-                    </p> -->
+                
             </div>
+        {% endfor %}
         </div>
     </div>
 

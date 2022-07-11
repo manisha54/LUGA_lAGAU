@@ -266,10 +266,24 @@
                         </select>
                     </div>
                     <div class="product-category">
-                    {% for x in pics %}
-                    <a href="product/product"><img src="{{x.image.url}}" class="img-fluid" alt="Responsive image" > </a>
-                    <p class="lead">{{x.caption}}</p><hr>
-                    {% endfor %}
+                        {% for x in pics %}
+                        <div class="col-4">
+                            <a href="product/product"><img src="{{x.image.url}}" alt="Responsive image" > </a>
+                           
+                            <p class="lead" style="font-size: 30px;">{{x.caption}}</p>
+                            <p class="lead" style="font-size: 20px; padding-top: -60px;">{{x.price}}</p>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-half-o"></i>
+                                <i class="fa fa-star-o"></i>
+                            </div>
+                            <!-- <p>rs.1200</p> -->
+                        </div>
+                        {% endfor %}
+                 
+                 
                     </div>
                     
                     <div class="page-btn">

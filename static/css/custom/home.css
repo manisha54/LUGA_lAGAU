@@ -750,7 +750,7 @@ h6 {
 /* .........................feature product..................................................... */
 
 .product-category{
-    /* display: flex; */
+    display: flex;
 }
 
 
@@ -845,6 +845,7 @@ h4 {
 
 .rating {
     color: #ff523b;
+    margin-top: -70px;
 }
 
 .col-4:hover {
