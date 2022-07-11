@@ -1,0 +1,171 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+
+
+
+
+<!-- contact -->
+<div class="master-wrapper-content">
+    <div class="master-column-wrapper">
+        <div class="centre-1">
+            <div class="page-head">
+                <div class="container2">
+                    <h3>
+                        C
+                        <span>ontact Us</span>
+                    </h3>
+                    <div class="service-breadcrum">
+                        <div class="agile_inner_breadcrumb">
+                            <ul class="w3_short">
+                                <li>
+                                    <a href="/">Home</a>
+                                <li style="margin-left: 14px;"> |</li>
+                                </li>
+                                <li>Contact</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="banner_bottom">
+                <div class="container3">
+                    <div class="contact-grid">
+                        <div class="col-md-4 contact-grid1">
+                            <div class="contact-grid2">
+                                <i class="fa fa-map-marker" aria-hidden="true">
+
+                                </i>
+                                <h4>Address</h4>
+                                <p>
+                                    Anamnagar
+                                    <span>kathmandu</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 contact-grid1">
+                            <div class="contact-grid2">
+                                <i class="fa fa-phone" aria-hidden="true">
+
+                                </i>
+                                <h4>Call Us</h4>
+                                <p>
+                                    +977 9800562062
+                                    <span>+977 9864968870</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 contact-grid1">
+                            <div class="contact-grid2">
+                                <i class="fa fa-envelope-o" aria-hidden="true">
+
+                                </i>
+                                <h4>Email</h4>
+                                <p>
+                                    <span>
+                                        <a href="mailto: lugalagau@gmail.com">
+                                            lugalagau@gmail.com </a>
+                                    </span>
+                                    <br>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="contact_container mb-3 py-0">
+        <h1 class="text-centre">Contact form</h1>
+ 
+        <form  method="post" action="/" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name"  name="name" placeholder="Enter your name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email">
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="phone" class="form-control" id="phone" name="phone" placeholder="Enter your phone number">
+            </div>
+           
+            <div class="form-group">
+                <label for="desc">Tell me about what you want to contact me for.... </label>
+                <textarea class="form-control" id="desc" rows="3" name="decs"></textarea>
+            </div>
+            <button class="btn btn-primary" type="submit"> Send</button>
+        </form>
+    </div>
+
+    <br>
+    <br>
+
+
+    <div class="coupons" style="padding-top: 0;">
+        <div class="coupons-grid text-centre">
+            <div class="w3layouts_mail_grid">
+                <div class="col-md-3 w3layouts_mail_grid_left">
+                    <div class="w3layouts_mail_grid_left1 hvr-radial-out">
+                        <i class="fa fa-truck" aria-hidden="true">
+
+                        </i>
+                    </div>
+                    <div class="w3layouts_mail_grid_left2">
+                        <h3>FREE SHIPPING</h3>
+                        <p>To all clients over 15km radius.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 w3layouts_mail_grid_left">
+                    <div class="w3layouts_mail_grid_left1 hvr-radial-out">
+                        <i class="fa fa-shopping-bag" aria-hidden="true">
+
+                        </i>
+                    </div>
+                    <div class="w3layouts_mail_grid_left2">
+                        <h3>MONEY BACK GUARANTEE</h3>
+                        <p>For damaged or disliked items.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 w3layouts_mail_grid_left">
+                    <div class="w3layouts_mail_grid_left1 hvr-radial-out">
+                        <i class="fa fa-globe" aria-hidden="true">
+
+                        </i>
+                    </div>
+                    <div class="w3layouts_mail_grid_left2">
+                        <h3>EVRYTHING</h3>
+                        <p>Every traditional items under one roof.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 w3layouts_mail_grid_left">
+                    <div class="w3layouts_mail_grid_left1 hvr-radial-out">
+                        <i class="fa fa-gift" aria-hidden="true">
+
+                        </i>
+                    </div>
+                    <div class="w3layouts_mail_grid_left2">
+                        <h3>FREE GIFT COUPONS</h3>
+                        <p>During festivals and occasions.</p>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br>
+
+
+
+
+
+
+{% endblock content %}

@@ -1,7 +1,3 @@
-{% extends 'base.html' %}
-{% block body %}
-{% enblock body %}
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,10 +35,10 @@
             <a href=""><img src="{% static 'image/menu/logo_.png'%}" width="50%"></a>
         </div>
         <div class="nav-items">
-            <li><a href="#">Home</a></li>
+            <li><a href="/">Home</a></li>
             <!-- <li><a href="#">About</a></li> -->
-            <li><a href="#">Contact</a></li>
-            <li><a href="">Feedback</a></li>
+            <li><a href="contact/contact">Contact</a></li>
+           
         </div>
         <div class="search-icon"><span class="fas fa-search"></span></div>
         <div class="cancel-icon"><span class="fas fa-times"></span></div>
@@ -56,7 +52,7 @@
                 <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content">
-                <a href="#">Log In</a>
+                <a href="user/login">Log In</a>
                 <a href="#">Sign Up</a>
                 <a href="#">logout</a>
             </div>
@@ -268,120 +264,13 @@
                             <option>Short by rating</option>
                         </select>
                     </div>
-
-                    <div class="row">
-                        <div class="col-4">
-                            <a href="'product/singleproduct.html">Next</a>
-                            <a href=""><img src="{% static 'image/women/limbu.jpg'%}"></a>
-                            <h4>Limbu dress</h4>
-                            <div class="rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-half-o"></i>
-                                <i class="fa fa-star-o"></i>
-                            </div>
-                            <p>rs.1200</p>
-                        </div>
-
-                        <div class="col-4">
-                            <img src="{% static 'image/women/gurung.jpg'%}">
-                            <h4>gurung dress</h4>
-                            <div class="rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-o"></i>
-                            </div>
-                            <p>rs.1000</p>
-                        </div>
-                        <div class="col-4">
-                            <img src="{% static 'image/women/newar.jpg'%}">
-                            <h4>newar dress</h4>
-                            <div class="rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-o"></i>
-                            </div>
-                            <p>rs.1100</p>
-                        </div>
-                        <div class="col-4">
-                            <img src="{% static 'image/women/sherpa.jpg'%}">
-                            <h4>Sherpa dress</h4>
-                            <div class="rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-o"></i>
-                            </div>
-                            <p>rs.1300</p>
-                        </div>
-                        <div class="col-4">
-                            <img src="{% static 'image/women/sunuwar.jpg'%}">
-                            <h4>Sunuwar dress</h4>
-                            <div class="rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-o"></i>
-                            </div>
-                            <p>rs.1200</p>
-                        </div>
-                        <div class="col-4">
-                            <img src="{% static 'image/women/magar.jpg'%}">
-                            <h4>Magar dress</h4>
-                            <div class="rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-o"></i>
-                            </div>
-                            <p>rs.1200</p>
-                        </div>
-
-                        <div class="col-4">
-                            <img src="{% static 'image/women/gurung.jpg'%}">
-                            <h4>Magar dress</h4>
-                            <div class="rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-o"></i>
-                            </div>
-                            <p>rs.800</p>
-                        </div>
-                        <div class="col-4">
-                            <img src="{% static 'image/women/gurung.jpg'%}">
-                            <h4>Magar dress</h4>
-                            <div class="rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-o"></i>
-                            </div>
-                            <p>rs.900</p>
-                        </div>
-                        <div class="col-4">
-                            <img src="{% static 'image/women/gurung.jpg'%}">
-                            <h4>Magar dress</h4>
-                            <div class="rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-o"></i>
-                            </div>
-                            <p>rs.1200</p>
-                        </div>
+                    <div class="product-category">
+                    {% for x in pics %}
+                    <a href="product/product"><img src="{{x.image.url}}" class="img-fluid" alt="Responsive image" > </a>
+                    <p class="lead">{{x.caption}}</p><hr>
+                    {% endfor %}
                     </div>
+                    
                     <div class="page-btn">
                         <span>1</span>
                         <span>2</span>

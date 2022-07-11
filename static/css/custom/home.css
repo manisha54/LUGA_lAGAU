@@ -749,6 +749,10 @@ h6 {
 
 /* .........................feature product..................................................... */
 
+.product-category{
+    display: flex;
+}
+
 
 .categories {
     margin-top: 70px;
@@ -876,12 +880,13 @@ h4 {
 }
 
 .sale {
-    background: url(static/image/background/mid.jpg)no-repeat 0px 0px;
+    background: url('{% static "image/background/mid.jpg"%}')no-repeat 0px 0px;
     background-attachment: fixed;
     background-size: cover;
     -webkit-background-size: cover;
     min-height: 380px;
-    background-color: red;
+    background-color: #03a855;
+   
 }
 
 
@@ -1188,279 +1193,6 @@ footer a:hover {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ................for women..... */
-
-.container1 {
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-    width: 1120;
-}
-
-.block-category-navigation {
-    width: 250px;
-    height: 500px;
-}
-
-.side-2 {
-    /* float: left; */
-    width: 25%;
-}
-
-.center-2,
-.side-2 {
-    margin: 0 0 50px;
-}
-
-.div {
-    display: block;
-}
-
-.css-treeview {
-    border: 1px solid #d2d2d2;
-}
-
-/* .css-treeview {
-    -webkit-animation: webkit-adjacent-element-selector-bugfix infinite 1s;
-} */
-.css-treeview {
-    user-select: none;
-}
-
-.community-poll h4,
-.css-treeview h4 {
-    padding: 13px 0;
-    font-size: 21px;
-}
-
-.css-treeview h4,
-.community-poll h4 {
-    color: #f77737;
-    text-align: center;
-    background: #f7f7f7;
-    padding: 17px 0;
-    font-size: 1.2em;
-    font-weight: 700;
-    border-bottom: 1px solid #d2d2d2;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    margin: 0;
-    font-family: 'Open Sans', sans-serif;
-}
-
-.css-treeview ul,
-.css-treeview li {
-    list-style: none;
-
-}
-
-.tree-list-pad {
-    padding: 15px 4;
-    height: 200px;
-}
-
-ul {
-    margin: 0;
-    padding: 0;
-}
-
-.block .list li {
-    padding: 3px 0 3px 7px;
-}
-
-.css-treeview ul,
-.css-treeview li {
-    list-style: none;
-}
-
-.block .list .active>a {
-    color: #03a855;
-}
-
-.block .list a {
-    display: inline-block;
-    position: relative;
-    padding: 5px 0;
-    font-size: 16px;
-
-    transition: all 0.1s ease;
-}
-
-.css-treeview label,
-.css-treeview a,
-.css-treeview label::before {
-    vertical-align: middle;
-}
-
-.css-treeview a {
-    text-decoration: none;
-}
-
-.css-treeview a {
-    margin: 2px;
-    font-size: 14px;
-    letter-spacing: 1px;
-}
-
-.block .sublist {
-    margin: 15px 0 5px;
-}
-
-.css-treeview ul,
-.css-treeview li {
-    list-style: none;
-}
-
-.block .list li {
-    padding: 5px 0 5px 15px;
-}
-
-.css-treeview ul,
-.css-treeview li {
-    list-style: none;
-}
-
-.block .sublist a {
-    font-size: 14px;
-}
-
-.block .list a {
-    display: inline-block;
-    position: relative;
-    padding: 5px 0;
-    font-size: 16px;
-    color: #444;
-    -webkit-transition: all 0.1s ease;
-    transition: all 0.1s ease;
-}
-
-
-.block .sublist a {
-    font-size: 14px;
-    margin: 15px 0 5px;
-}
-
-/* ............................ */
-.center-2 {
-    float: right;
-    width: 73%;
-    position: sticky;
-    padding: 10px;
-    border-radius: 8px;
-    align-self: flex-start;
-    margin-top: -100px;
-    margin-left: 400px;
-
-}
-
-.men-wear-top img {
-    margin-top: -800px;
-    margin-left: 400px;
-    width: 750px;
-    height: 350px;
-}
-
-/* .products-right h5{
-    margin-top: -800px;
-    margin-left: 400px;
-}  */
-
-.center-2,
-.side-2 {
-    margin: 0 0 50px;
-}
-
-.products-right {
-    text-align: center;
-    padding-right: 0;
-}
-
-.center-2,
-.side-2 {
-    margin: 0 0 50px;
-}
-
-.products-right h5 {
-    color: #0c0c0c;
-    text-transform: uppercase;
-    font-size: 1.5em;
-    font-weight: 700;
-    letter-spacing: 1px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ......................contact details..................................................................... */
 .master-wrapper-content{
     width: 100%;
@@ -1477,9 +1209,10 @@ ul {
     margin: 0 0 100px;
 }
 .page-head{
-    background: url(image/inner1.jpg) no-repeat center;
+    background: url('{% static "image/background/inner.jpg"%}') no-repeat center;
     min-height: 200px;
     padding-top: 50px;
+   
 }
 .page-head h3 span{
     font-weight: 300;
@@ -1612,6 +1345,14 @@ display: block;
     margin-left: 782px;
 
 }
+.contact_container{
+   
+    margin-top: -106px;
+    width: 650px;
+    margin-left: 300px;
+}
+
+
 
 
 /* 
