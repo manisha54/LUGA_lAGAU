@@ -34,7 +34,7 @@
     <nav>
         <div class="menu-icon"><span class="fas fa-bars"></span></div>
         <div class="logo">
-            <a href=""><img src="{% static 'image/menu/logo_.png'%}" width="50%"></a>
+            <a href="/"><img src="{% static 'image/menu/logo_.png'%}" width="50%"></a>
         </div>
         <div class="nav-items">
             <li><a href="/">Home</a></li>
@@ -54,8 +54,8 @@
                 <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content">
-                <a href="user/login">Log In</a>
-                <a href="#">Sign Up</a>
+                <a href="{% url 'register' %}">Log In</a>
+                <a href="{% url 'login' %}">Sign Up</a>
                 <a href="#">logout</a>
             </div>
         </div>
