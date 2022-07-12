@@ -7,7 +7,7 @@
     <title>Luga lagau</title>
      {% load static %}
     <link rel="stylesheet" href="{% static 'css/custom/home.css'%}"/>
-    <script src="{% static 'js/custom/custom.js'%}" ></script>
+   
 
 
     <script src="https://kit.fontawesome.com/e48d166edc.js" crossorigin="anonymous"></script>
@@ -52,9 +52,9 @@
                 <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content">
-                <a href="{% url 'login' %}">Log In</a>
-                <a href="{% url 'register' %}">Sign Up</a>
-                <a href="#">logout</a>
+                <a href="{% url 'register' %}">Log In</a>
+                <a href="{% url 'login' %}">Sign Up</a>
+                <a href="{% url 'logout' %}">logout</a>
               
             </div>
         </div>
@@ -180,7 +180,7 @@
         <br>
         
         
-<!-- ...........incomplete.................................................            
+<!-- ...........schedule bottom.................................................            
              -->
     </section>
     <section>
@@ -477,4 +477,5 @@
         cancelBtn.classList.add("show");
     }
 </script>
+<script src="{% static 'js/custom/custom.js'%}" ></script>
 </html>

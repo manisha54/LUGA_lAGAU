@@ -18,6 +18,7 @@ def register_page(request):
         if form.is_valid():
             form.save()
             user = form.cleaned_data.get('username')
+            
             messages.success(request,"registered sucessfully")
             return redirect("/user/login")
     context = {'form': form}
@@ -32,11 +33,14 @@ def login_page(request):
         user =authenticate(request, username=username, password=password)
         if user is not None:
             login(request,user)
-            return redirect("home/index")
+            return redirect("/")
+         
             
     context = {}
     return render(request,"user/login.html",context)
 
 
-
+def logout_fn(request):
+    logout(request)
+    return redirect("/user/login")
 

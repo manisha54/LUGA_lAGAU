@@ -437,7 +437,7 @@ nav .cancel-icon {
 }
 
 
-/* ....about......................... */
+/* ....about us......................... */
 
 .container1 {
     margin-top: 70px;
@@ -511,6 +511,29 @@ svg {
         width: 12ch;
     }
 }
+
+@media (max-width: 576px) {
+
+    .head-img img{
+        max-width: 30%;
+        height: auto;
+    }
+
+    
+}
+@media (max-width: 992px) {
+
+    .head-img img{
+        width: 432px;
+        height: 450px;
+    }
+
+    
+}
+
+
+
+
 
 /* .......................................................... */
 
@@ -746,6 +769,26 @@ h6 {
 }
 
 
+@media (max-width: 576px){
+
+    col-md-6 {
+        flex: 0 0 auto;
+        width: 59%;
+    }
+    
+}
+@media (max-width: 992px) {
+
+    .schedule_bottom_right_grid {
+        margin-left: -294px;
+        margin-top: 26px;
+
+    }
+    
+}
+
+
+
 
 /* .........................feature product..................................................... */
 
@@ -869,6 +912,16 @@ h4 {
 .page-btn span:hover{
     background: #ff523b;
     color: #fff;
+}
+
+@media (max-width: 576px){
+
+    product-category {
+        margin-left: -91px;
+        width: 2028px;
+        height: 1000px;
+    }
+    
 }
 
 
@@ -1176,15 +1229,17 @@ footer a:hover {
     text-align: start !important;
     text-align-last: start !important;
 }
-/* .small-img-row{
-    display: flex;
-    justify-content: space-around;
+
+ /* media queries */
+@media(min-width: 1200px) {
+    /* .colu-2 img {
+        margin-left: -19px;
+        margin-top: -498px;
+      
+    } */
 }
-.small-img-col{
-    flex-basis: 24%;
-    cursor: pointer;
-}
- */
+
+
 
 
 
