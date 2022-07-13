@@ -4,6 +4,11 @@ from addproduct.models import AddProduct
 from django.contrib.auth import authenticate,login,logout
 from django.contrib import messages
 from django.contrib.auth.models import User
+from django.contrib.auth.decorators import login_required
+
+
+
+
 
 # Create your views here.
 
@@ -13,20 +18,22 @@ def index(request):
     return render(request, 'home/index.html',{"pics" : pics})
 
 
+
+@login_required(login_url="/addproduct/signin")
 def create(request):
     return render(request, 'addproduct/create.html')
    
+
+@login_required(login_url="/addproduct/signin")
 def saveFn(request):
      print(request.FILES)
      forms=AddProductForms(request.POST,request.FILES)
      forms.save()
      return redirect('/')
 
+     
 
-
-
-
-
+# ............................................
 
 
 
@@ -45,6 +52,10 @@ def signin(request):
             return redirect("/addproduct/login")
     else:
         return render(request, 'addproduct/signin.html')
+
+
+
+
 
 def signout(request):
     print(request.method)       
