@@ -1,13 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> {% block title %}{% endblock title %} lugalagau</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/custom/create.css'%}" />
+
+    <script src="https://kit.fontawesome.com/e48d166edc.js" crossorigin="anonymous"></script>
 
 
 
-<form action="/addproduct/save" method="POST" enctype="multipart/form-data">
-    {% csrf_token %}
-    product name:<input type="text" name="caption"/>
-    product price:<input type="text" name="price"/>
-    image: <input type="file" name="image">
 
-    <input type="submit" value="save"/>
+</head>
+
+<style>
+
+</style>
+
+<body>
 
 
-</form>
+    <div class="section-empty">
+        <div class="conatiner_content">    
+            <div class="row">
+                <div class="col-md-7">
+                    <h1 class="text-centre">Create Post by Admin</h1>
+                    <form action="/addproduct/save" method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}
+
+                        <div class="form-group">
+                            <label for="name">product name</label>
+                            <input type="text" name="caption" class="form-control" placeholder="enter product name">
+                        </div>
+                        <br>
+
+                        <div class="form-group">
+                            <label for="name"> product price</label>
+                            <input type="text" name="price" class="form-control" placeholder="Price of product">
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <label for="name">image</label>
+                            <input type="file" name="image" class="form-control" placeholder="Image">
+                        </div>
+                        <br>
+
+                        <input type="submit" class="total_btn_cart text_centre_button" value="Create Product" />
+                    </form>
+                </div>
+            </div>
+       </div>
+    </div>
+</body>
+
+<script src="{% static 'js/custom/custom.js'%}"></script>
+
+</html>
