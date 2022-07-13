@@ -5,5 +5,6 @@ app_name = "home"
 urlpatterns =[
     path("",views.index, name="home"),
     path("search/",views.search, name="search"),
+    path("checkout/",views.checkout, name="checkout"),
   
 ]

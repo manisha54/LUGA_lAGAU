@@ -1,0 +1,193 @@
+{% extends "base.html" %}
+{% block content %}
+
+<style>
+    .conatiner_content{
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 600px;
+    
+    
+    height: 500px;
+   
+    }
+    .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+   
+    }
+    .col-md-7{
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+  
+    }
+    .billing_text {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    margin: 0;
+    font-size: 30px;
+    color: #737373;
+    margin-top: 24px;
+    margin-bottom: -12px;
+    padding-left: 180px;
+   
+    }
+     p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    }
+    .input_form {
+    margin-top: 2rem;
+    }
+    .input_form .input_box_cart {
+        margin-bottom: 15px;
+    }
+    .input_form .input_box_cart input, .input_form
+    .input_box_cart textarea {
+    width: 100%;
+    border: 1px solid #d4d4d491;
+    outline: none;
+    padding: 6px 10px;
+    font-weight: 600;
+    font-size: 13px;
+    resize: none;
+    font-family: "Montserrat", sans-serif;
+    }
+    [type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+    cursor: pointer;
+    }
+
+    [type=button], [type=reset], [type=submit], button {
+        -webkit-appearance: button;
+    }
+    .text_center_button {
+        justify-content: center;
+    }
+    .text_center_button {
+    justify-content: center;
+    }
+
+    .total_btn_cart {
+        width: 100%;
+        background: #ac1734 !important;
+        border-color: #ac1734 !important;
+        padding: 9px 19px !important;
+        display: flex;
+        justify-content: space-between;
+        color: #fff;
+        font-weight: 500;
+        border-style: unset;
+        font-family: "Montserrat", sans-serif;
+        justify-content: center;
+    }
+    button, select {
+        text-transform: none;
+    }
+        
+   
+
+
+
+</style>
+
+
+<div class="section-empty">
+    <div class="conatiner_content">
+        
+        <div class="row">
+            <div class="col-md-7">
+                <p class="billing_text">Billing Address</p>
+            </div>
+            <form method="POST" action="/home/checkout" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="input_form">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="input_box_cart">
+                            <input type="text" id="Name" name="Name" placeholder="Full Name">          
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="input_box_cart">
+                            <input type="phone" id="Phone1" name="Phone1" placeholder="Mobile Number">          
+                        </div>
+                    </div>          
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="input_box_cart">
+                            <input type="email" id="Email" name="Email" placeholder="Email Address">          
+                        </div>
+                    </div> 
+                    <div class="col-md-6">
+                        <div class="input_box_cart">
+                            <input type="phone" id="Phone2" name="Phone2" placeholder="Phone Number">          
+                        </div>
+                    </div> 
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="input_box_cart">
+                            <textarea rows="4"  id="Address" name="Address" placeholder="Full Address"></textarea>         
+                        </div>
+                    </div> 
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="input_box_cart">
+                            <input type="number" id="Quantity" name="Quantity" type placeholder="No of Quantity">          
+                        </div>
+                    </div> 
+                    <div class="col-md-6">
+                        <div class="input_box_cart">
+                            <input type="text" id="P_name" name="P_name" placeholder="Product Name">          
+                        </div>
+                    </div> 
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="input_box_cart">
+                            <input type="text" id="City" name="City" placeholder="City">          
+                        </div>
+                    </div> 
+                    <div class="col-md-6">
+                        <div class="input_box_cart">
+                            <input type="text" id="Country" name="Country" placeholder="Country">          
+                        </div>
+                    </div> 
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="input_box_cart">
+                            <input type="text" id="state" name="state" placeholder="State">          
+                        </div>
+                    </div> 
+                    <div class="col-md-6">
+                        <div class="input_box_cart">
+                            <input type="number" id="zipcode" name="zipcode" placeholder="Zip code">          
+                        </div>
+                    </div> 
+                </div>
+                
+                <button type="submit" class="total_btn_cart text_centre_button" value="save">
+                    Place Order
+                </button>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock content %}

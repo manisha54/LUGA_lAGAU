@@ -9,8 +9,8 @@ def contactus(request):
         email = request.POST.get('email')
         phone = request.POST.get('phone')
         desc = request.POST.get('desc')
-        Contact = Contact(name=name, email=email, phone=phone,desc=desc, date=datetime.today())
-        Contact.save()
+        contactus = contactus(name=name, email=email, phone=phone,desc=desc, date=datetime.today())
+        contactus.save()
     return render(request, 'contact/contact.html')
 
 

@@ -27,7 +27,8 @@ urlpatterns = [
     path("",include("home.urls")),
     path("user",include("user.urls")),
     path("product",include("product.urls")),
-    path("contact",include("contact.urls"))
+    path("contact",include("contact.urls")),
+    
 
 ]
 
