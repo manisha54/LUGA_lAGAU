@@ -31,21 +31,17 @@ def saveFn(request):
      forms.save()
      return redirect('/')
 
-
-
-
-
-# .......function for single product...........................................................
-def singleproduct(request):
-    return render(request, 'addproduct/singleproduct.html')
-
-
-
-
+     
 
 # ............................................
 
 
+
+
+
+
+
+    # .......................
 
 def signin(request):
     if request.method == "POST":

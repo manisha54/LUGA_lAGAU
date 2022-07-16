@@ -6,3 +6,4 @@ class AddProductForms(forms.ModelForm):
     class Meta:
         model = AddProduct
         fields="__all__"
+

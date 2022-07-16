@@ -59,7 +59,7 @@ h1{
     font-weight: 500px;
     font-family: fantasy;
     width: 600px;
-    margin-left: -78px;
+    margin-left: -70px;
 }
 
 
@@ -133,32 +133,32 @@ justify-content: center;
             <div class="row">
                 <div class="col-md-7">
                     <h1 class="text-centre">Add details of product with image</h1>
-                    <form action="/addproduct/save" method="POST" enctype="multipart/form-data">
+                    <form action="/product/save" method="POST" enctype="multipart/form-data">
                         {% csrf_token %}
 
                         <div class="form-group">
-                            <label for="name">Caption1</label>
+                            <label for="caption1">Caption1</label>
                             <input type="text" name="caption" class="form-control" placeholder="Product name">
                         </div>
                         <br>
 
                         <div class="form-group">
-                            <label for="name">caption2</label>
+                            <label for="caption2">caption2</label>
                             <input type="text" name="price" class="form-control" placeholder="Product name">
                         </div>
                         <br>
                         <div class="form-group">
-                            <label for="name">Description of product</label>
+                            <label for="decs">Description of product</label>
                             <input type="text" name="price" class="form-control" placeholder="Details of product">
                         </div>
                         <br>
                         <div class="form-group">
-                            <label for="name">Image</label>
+                            <label for="image">Image</label>
                             <input type="file" name="image" class="form-control" placeholder="Image">
                         </div>
                         <br>
 
-                        <input type="submit" class="total_btn_cart text_centre_button" value="Create Product" />
+                        <input type="submit" class="total_btn_cart text_centre_button" value="save" />
                     </form>
                 </div>
             </div>

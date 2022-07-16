@@ -133,7 +133,7 @@ justify-content: center;
 <body>
     <nav class="nav-bar">
         <a href="/"><button class="btn btn-primary"> view site</button></a>
-        <a href="/"><button class="btn btn-primary"> Add detail of single product</button></a>
+        <a href="{% url 'product_detail' %}"><button class="btn btn-primary"> Add detail of single product</button></a>
     </nav>
 
 
@@ -162,7 +162,7 @@ justify-content: center;
                         </div>
                         <br>
 
-                        <input type="submit" class="total_btn_cart text_centre_button" value="Create Product" />
+                        <input type="submit" class="total_btn_cart text_centre_button" value="save" />
                     </form>
                 </div>
             </div>
@@ -173,3 +173,23 @@ justify-content: center;
 <script src="{% static 'js/custom/custom.js'%}"></script>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -6,4 +6,6 @@ urlpatterns =[
     path("/product",views.singleproduct),   
    
 
+    path("/productdetail",views.productdetail,name="product_detail"), 
+    path("/save",views.saveFn, name='product_save'), 
 ]
