@@ -6,6 +6,7 @@ from contact.models import Contact
 def contactus(request):
     if request.method== "POST":
         name = request.POST.get('name')
+        print(name)
         email = request.POST.get('email')
         phone = request.POST.get('phone')
         desc = request.POST.get('desc')

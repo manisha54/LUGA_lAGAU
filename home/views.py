@@ -8,6 +8,7 @@ from tokenize import Name
 from turtle import title
 from unittest import result
 from django.shortcuts import render
+from django.contrib.auth.decorators import login_required
 
 import product
 from .models import Image
@@ -21,7 +22,7 @@ def index(request):
 def search(request):
     return render(request, 'home/search.html')
 
-
+@login_required(login_url="user/login.html")
 def checkout(request):
     if request.method == "POST":
         Name = request.POST.get('Name')
