@@ -57,7 +57,9 @@ h1{
     font-size: 40px;
     color: #f77737;
     font-weight: 500px;
-    font-family: fantasy;;
+    font-family: fantasy;
+    width: 600px;
+    margin-left: -78px;
 }
 
 
@@ -119,41 +121,35 @@ justify-content: center;
         justify-content: center;
 }
 
-.nav-bar .btn{
-   margin-bottom: -34px;
-    margin-left: 41px;
-} 
-.nav-bar .btn{
-   margin-bottom: -34px;
-    margin-left: 41px;
-} 
 
 </style>
 
 <body>
-    <nav class="nav-bar">
-        <a href="/"><button class="btn btn-primary"> view site</button></a>
-        <a href="/"><button class="btn btn-primary"> Add detail of single product</button></a>
-    </nav>
+   
 
 
     <div class="section-empty">
         <div class="conatiner_content">    
             <div class="row">
                 <div class="col-md-7">
-                    <h1 class="text-centre">Create Post by Admin</h1>
+                    <h1 class="text-centre">Add details of product with image</h1>
                     <form action="/addproduct/save" method="POST" enctype="multipart/form-data">
                         {% csrf_token %}
 
                         <div class="form-group">
-                            <label for="name">Product name</label>
-                            <input type="text" name="caption" class="form-control" placeholder="Enter product name">
+                            <label for="name">Caption1</label>
+                            <input type="text" name="caption" class="form-control" placeholder="Product name">
                         </div>
                         <br>
 
                         <div class="form-group">
-                            <label for="name"> Product price</label>
-                            <input type="text" name="price" class="form-control" placeholder="Price of product">
+                            <label for="name">caption2</label>
+                            <input type="text" name="price" class="form-control" placeholder="Product name">
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <label for="name">Description of product</label>
+                            <input type="text" name="price" class="form-control" placeholder="Details of product">
                         </div>
                         <br>
                         <div class="form-group">
