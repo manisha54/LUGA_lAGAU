@@ -1,5 +1,5 @@
-from django.shortcuts import render
-
+from django.shortcuts import render, redirect
+from customer.forms import CustomerForms
 from customer.models import Customer
 
 # Create your views here.
@@ -9,3 +9,9 @@ def index(request):
      
 def create(request):
     return render(request, "addproduct/create.html")
+
+def save(request):
+     form = CustomerForms(request.POST)
+     print(request.FILES)
+     form.save()
+     return redirect('/customer')

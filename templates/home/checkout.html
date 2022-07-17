@@ -108,7 +108,7 @@
             <div class="col-md-7">
                 <p class="billing_text">Billing Address</p>
             </div>
-            <form method="POST" action="/home/checkout" enctype="multipart/form-data">
+            <form method="POST" action="/customer/save" >
             {% csrf_token %}
             <div class="input_form">
                 <div class="row">
