@@ -1,6 +1,7 @@
 
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 from datetime import datetime
+from contact.forms import ContactForms
 from contact.models import Contact
 # Create your views here.
 def contactus(request):
@@ -14,4 +15,8 @@ def contactus(request):
         contactus.save()
     return render(request, 'contact/contact.html')
 
-
+def save(request):
+     form = ContactForms(request.POST)
+     print(request.FILES)
+     form.save()
+     return redirect('/contact')

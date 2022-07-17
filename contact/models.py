@@ -10,6 +10,6 @@ class Contact(models.Model):
     decs = models.TextField()
     date = models.DateField
 
+    class Meta:
+        db_table="contact"
 
-    def __str__(self):
-        return self.name
