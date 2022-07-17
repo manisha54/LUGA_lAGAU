@@ -108,7 +108,7 @@
             <div class="col-md-7">
                 <p class="billing_text">Billing Address</p>
             </div>
-            <form method="POST" action="/customer/save" >
+            <form method="POST" action="/customer/update/{{data.id}}" >
             {% csrf_token %}
             <div class="input_form">
                 <div class="row">
@@ -179,7 +179,7 @@
                     </div> 
                 </div>
                 
-                <button type="submit" class="total_btn_cart text_centre_button" value="save">
+                <button type="submit" class="total_btn_cart text_centre_button" value="update">
                     Place Order
                 </button>
             </div>

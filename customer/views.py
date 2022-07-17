@@ -15,3 +15,19 @@ def save(request):
      print(request.FILES)
      form.save()
      return redirect('/customer')
+
+def edit(request,id):
+     print(id)
+     data=Customer.objects.get(id=id)
+     return render(request, "customer/edit.html",{'data': data})
+
+def update(request,id):
+     data=Customer.objects.get(id=id)
+     form=CustomerForms(request.POST, request.FILES, instance=data)
+     form.save()
+     return redirect('/customer')
+     
+def delete(request,id):
+     data=Customer.objects.get(id=id)
+     data.delete()
+     return redirect('/customer')
