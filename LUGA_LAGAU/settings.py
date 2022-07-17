@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'product.apps.ProductConfig',
     'contact.apps.ContactConfig',
     'addproduct.apps.AddproductConfig',
-   
+    'customer.apps.CustomerConfig',
   
 ]
 
