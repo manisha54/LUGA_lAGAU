@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Responsive Table</title>
+  <title>Checkout Table</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {% load static %}
   <link rel="stylesheet" href="{% static 'css/custom/index.css'%}" />
@@ -41,8 +41,9 @@
         <td>{{c.zipcode}}</td>
         
         <td>
-            <a href="/customer/edit/{{c.id}}">EDIT</a>
-            <a href="/customer/delete/{{c.id}}">DELETE</a>
+            <a href="/customer/edit/{{c.id}}"><button class="btn"> EDIT</button></a>
+            <a href="/customer/delete/{{c.id}}"><button class="btn"> DELETE</button></a>
+           
            
           
         </td>

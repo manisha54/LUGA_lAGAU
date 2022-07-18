@@ -769,23 +769,6 @@ h6 {
 }
 
 
-@media (max-width: 576px){
-
-    col-md-6 {
-        flex: 0 0 auto;
-        width: 59%;
-    }
-    
-}
-@media (max-width: 992px) {
-
-    .schedule_bottom_right_grid {
-        margin-left: -294px;
-        margin-top: 26px;
-
-    }
-    
-}
 
 
 
@@ -1268,6 +1251,7 @@ footer a:hover {
     background: url('{% static "image/background/inner.jpg"%}') no-repeat center;
     min-height: 200px;
     padding-top: 50px;
+
    
 }
 .page-head h3 span{

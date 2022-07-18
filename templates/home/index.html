@@ -28,6 +28,45 @@
 
 </head>
 
+<style>
+    .sale {
+    /* background: url */
+    background-attachment: fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    min-height: 380px;     
+    }
+
+    @media (max-width: 576px){
+
+    col-md-6 {
+        flex: 0 0 auto;
+        width: 59%;
+    }
+    product-category {
+        margin-left: -91px;
+        width: 2028px;
+        height: 1000px;
+    }
+    .row-2{
+    justify-content: space-between;
+    margin: 100px auto 50px;
+    color: red;
+    }
+
+    }
+    @media (max-width: 992px) {
+
+    .schedule_bottom_right_grid {
+        margin-left: -294px;
+        margin-top: 26px;
+
+    }
+
+    }
+
+</style>
+
 <body>
     <nav>
         <div class="menu-icon"><span class="fas fa-bars"></span></div>
@@ -268,7 +307,7 @@
                     <div class="product-category">
                         {% for x in pics %}
                         <div class="col-4">
-                            <a href="product/product"><img src="{{x.image.url}}" alt="Responsive image" > </a>
+                            <a href="/checkout/"><img src="{{x.image.url}}" alt="Responsive image" > </a>
                            
                             <p class="lead" style="font-size: 30px;">{{x.caption}}</p>
                             <p class="lead" style="font-size: 20px; padding-top: -0px;">{{x.price}}</p>

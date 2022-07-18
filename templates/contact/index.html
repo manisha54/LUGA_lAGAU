@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Contact Table</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/custom/index2.css'%}" />
+
+
+  
+
+</head>
+
+
+
+<table class="table">
+    <thread>
+        <th>name</th>
+        <th>email</th>
+        <th>phone</th>
+        <th>decs</th>
+        <th>Edit/Delete</th>
+        
+    </thread>
+    {% for c in contact %}
+    <tr>
+        <td>{{c.name}}</td>
+        <td>{{c.email}}</td>
+        <td>{{c.phone}}</td>
+        <td>{{c.decs}}</td>
+        <td>
+            <a href="/contact/edit/{{c.id}}"><button class="btn btn-primary"> EDIT</button></a>
+            <a href="/contact/delete/{{c.id}}"><button class="btn btn-danger"> DELETE</button></a>
+           
+           
+          
+        </td>
+
+    </tr>    
+
+    {% endfor %}    
+</table>
+
+
+</body>
+
+</html>

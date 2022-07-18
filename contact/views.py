@@ -10,8 +10,8 @@ def contactus(request):
         print(name)
         email = request.POST.get('email')
         phone = request.POST.get('phone')
-        desc = request.POST.get('desc')
-        contactus = contactus(name=name, email=email, phone=phone,desc=desc, date=datetime.today())
+        decs = request.POST.get('decs')
+        contactus = contactus(name=name, email=email, phone=phone,decs=decs, date=datetime.today())
         contactus.save()
     return render(request, 'contact/contact.html')
 
@@ -20,3 +20,25 @@ def save(request):
      print(request.FILES)
      form.save()
      return redirect('/contact')
+
+
+def index(request):
+     contact = Contact.objects.all()
+     return render(request, 'contact/index.html',{ 'contact': contact})
+
+def edit(request,id):
+     print(id)
+     data=Contact.objects.get(id=id)
+     return render(request, "contact/edit.html",{'data': data})
+
+def update(request,id):
+     data=Contact.objects.get(id=id)
+     form=ContactForms(request.POST, request.FILES, instance=data)
+     form.save()
+     return redirect('/contact')
+     
+def delete(request,id):
+     data=Contact.objects.get(id=id)
+     data.delete()
+     return redirect('/contact')
+     
