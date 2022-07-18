@@ -1,16 +1,7 @@
 
 import datetime
-from email.headerregistry import Address
-from multiprocessing import context
-from re import template
-from tkinter import E, S
-from tokenize import Name
-from turtle import title
-from unittest import result
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
-
-import product
 from .models import Image
 
 # Create your views here.

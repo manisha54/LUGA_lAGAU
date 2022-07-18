@@ -52,7 +52,7 @@
     justify-content: space-between;
     margin: 100px auto 50px;
     color: red;
-    }
+}
 
     }
     @media (max-width: 992px) {
@@ -307,7 +307,7 @@
                     <div class="product-category">
                         {% for x in pics %}
                         <div class="col-4">
-                            <a href="/checkout/"><img src="{{x.image.url}}" alt="Responsive image" > </a>
+                            <a href="product/product"><img src="{{x.image.url}}" alt="Responsive image" > </a>
                            
                             <p class="lead" style="font-size: 30px;">{{x.caption}}</p>
                             <p class="lead" style="font-size: 20px; padding-top: -0px;">{{x.price}}</p>

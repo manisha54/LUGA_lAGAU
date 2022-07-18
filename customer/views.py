@@ -6,7 +6,7 @@ from customer.models import Customer
 def index(request):
      customer = Customer.objects.all()
      return render(request, 'customer/index.html',{ 'customer': customer})
-     
+  
 def create(request):
     return render(request, "addproduct/create.html")
 
