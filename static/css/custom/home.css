@@ -917,7 +917,7 @@ h4 {
 }
 
 .sale {
-    /* background: url */
+    background: url("https://images.unsplash.com/photo-1485802007047-7774de7208e5?dpr=1&auto=compress,format&fit=crop&w=1800&h") no-repeat center center fixed;
     background-attachment: fixed;
     background-size: cover;
     -webkit-background-size: cover;
