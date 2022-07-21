@@ -3,7 +3,7 @@ from product import views
 
 urlpatterns =[
   
-    path("/product",views.singleproduct),   
+    path("/product",views.singleproduct, name="singleproduct"),   
    
 
     path("/productdetail",views.productdetail,name="product_detail"), 
