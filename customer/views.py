@@ -11,14 +11,14 @@ def create(request):
     return render(request, "addproduct/create.html")
 
 def save(request):
-     form = CustomerForms(request.POST)
+     form = CustomerForms(request.POST, request.FILES)
      print(request.FILES)
      form.save()
      return redirect('/customer')
 
 def edit(request,id):
-     print(id)
      data=Customer.objects.get(id=id)
+     print(id)
      return render(request, "customer/edit.html",{'data': data})
 
 def update(request,id):
